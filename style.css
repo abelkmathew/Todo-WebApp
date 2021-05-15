@@ -25,7 +25,8 @@ body{
     color: #00a5a1;
     font-weight: 600;
     font-size: 40px;
-    
+    /* padding-left:42%;
+    padding-left:42%; */
 }
 .heading p{
     display: inline;
@@ -72,7 +73,9 @@ form{
     left: 0;
     right: 0;
     margin: 0 auto;
-    padding: 0 1rem;
+    padding: 0 0rem;
+    background-color: #dfe7ff;
+    border-style: solid;
 }
 
 input{
@@ -91,11 +94,11 @@ input{
     justify-content: center;
     align-items: center;
     transition: all .3s ease;
-    color:#d65064;
+    color:#00a5a1;
 }
 
 .btn1:hover{
-    color:#fff;
+    color:#d65064;
 }
 
 .btn2{
@@ -123,19 +126,57 @@ input{
 }
 
 
-
 /* extras */
 .completed{
-    background: #00a5a1 !important;
+    background-color: #00a5a1 !important;
+    color: #fff ;
+}
+.completed .btn1{
     color: #fff;
 }
-
-.completed button{
-    color: #fff;
+.completed .btn1:hover{
+    color: #d65064;
 }
 
-.delete:hover{
-    transition: all .3s ease;
-    background: rgb(221, 67, 67);
-    color: #fff;
+
+/* Clock */
+/* .clock{
+    border-style: solid;
+    margin-top: 2rem; */
+    /* max-width:300px; */
+    /* width: 100%;
+    display:inline-flex;
+    align-items: center;
+    justify-content: center;
+
+} */
+.c1{
+    max-width: 480px;
+    width: 100%;
+    margin: 0 auto; 
+    padding: 1rem;
+    padding-top: 0rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.clock p{
+    /* display: flex; */
+    font-weight: 600;
+    /* justify-content: center;
+    align-items: center; */
+    color: #00a5a1;
+    
+}
+.block{
+    display: inline-flex;
+    justify-content: right;
+    align-items: center;
+    margin: 5px;
+    font-size: 10px;
+}
+
+.c2{
+    display: none;;
 }
