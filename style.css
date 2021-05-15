@@ -1,0 +1,105 @@
+*{
+    margin: 0%;
+    padding: 0%;
+
+}
+body{
+    font-family: 'Poppins', sans-serif;
+    background-image:url("https://cdn.pixabay.com/photo/2017/08/28/09/40/phu-thap-boek-2688975_1280.jpg") ;
+    background-repeat:no-repeat ;
+    background-size: cover;    
+}
+
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 480px;
+    width: 100%;
+    margin: 0 auto; 
+}
+.heading{
+    text-align: center;
+    margin-top: 2rem;
+    color: #fff;
+    font-weight: 600;
+    font-size: 40px;
+}
+.todo-items{
+    padding-bottom: 4rem;
+    display: flex;
+    flex-flow: column-reverse;
+}
+.todo-items .item{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 0.5rem;
+    background: #fff;
+    border-radius: 5px;
+    margin: 5px 0px;
+}
+.todo-items .item p{
+    flex-grow: 1;
+    margin: 0;
+    padding: 0 10px;
+    cursor: pointer;
+}
+
+
+
+
+
+
+form{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    border-radius: 5px;
+    position: fixed;
+    max-width: 480px;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    padding: 0 0.5rem;
+}
+
+input{
+    flex-grow: 1;
+    background: #fff;
+    border: none;
+    padding: 1rem 1rem;
+    border-radius: 10px;
+    margin-right: 10px;
+}
+
+.btn1{
+    color: rgb(0, 0, 0);
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn1:hover{
+    color:red;
+}
+.btn2{
+    font-size: 30px;
+    
+    border-radius: 100px;
+}
+
+.btn2:hover{
+    color:rgb(1, 88, 77);
+}
+.item p{
+    flex-grow: 1;
+    margin: 0;
+    padding: 0 10px;
+    cursor: pointer;
+}
