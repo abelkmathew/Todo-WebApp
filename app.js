@@ -35,9 +35,9 @@ setInterval(calculate, 1000);
 
 form.addEventListener('submit',function(e){
     e.preventDefault();
-    let todo_value= form.todo_text.value;
+    let todo_value = form.todo_text.value;
     // console.log(todo_value);
-    form.todo_text.value='';
+    form.todo_text.value = '';
     let obj={
         item:todo_value, isCompleted:false
     };
@@ -47,16 +47,16 @@ form.addEventListener('submit',function(e){
 })
  
 function addNewTodo(val){
-    let item=document.createElement('div');
-    let paragraph=document.createElement('p');
-    let deleteBtn=document.createElement('btn1');
+    let item = document.createElement('div');
+    let paragraph = document.createElement('p');
+    let deleteBtn = document.createElement('btn1');
 
     paragraph.innerText=val.item;
     deleteBtn.innerHTML='<i class="bi bi-x-square-fill btn1"></i>';
 
     item.classList.add('item')
 
-    if(val.isCompleted==true){
+    if(val.isCompleted == true){
         item.classList.add('completed');
     }
 
@@ -73,8 +73,8 @@ function addNewTodo(val){
         let confirmvalue=confirm('Are you sure to delete?');
         if(confirmvalue){
             item.remove();
-            for(let i=0;i < todos.length;i++){
-                if(todos[i].item==val.item){
+            for(let i = 0 ; i < todos.length ; i++){
+                if(todos[i].item == val.item){
                     todos.splice(i,1);
                     updateLocalStorage();
                     break;
@@ -85,9 +85,9 @@ function addNewTodo(val){
     paragraph.addEventListener('click',function(e){
         if(item.classList.contains('completed')){
             item.classList.remove('completed');
-            for(let i=0;i < todos.length;i++){
-                if(todos[i].item==val.item){
-                    todos[i].isCompleted= false;
+            for(let i = 0 ;i < todos.length ; i++){
+                if(todos[i].item == val.item){
+                    todos[i].isCompleted = false;
                     updateLocalStorage();
                     break;
                 }
@@ -95,9 +95,9 @@ function addNewTodo(val){
         }
         else{
             item.classList.add('completed');
-            for(let i=0;i < todos.length;i++){
-                if(todos[i].item==val.item){
-                    todos[i].isCompleted= true;
+            for(let i = 0 ; i < todos.length ; i++){
+                if(todos[i].item == val.item){
+                    todos[i].isCompleted = true;
                     updateLocalStorage();
                     break;
                 }
@@ -122,7 +122,7 @@ function autoload(){
         let parseValues=JSON.parse(values);             //Sring converted back from string 
         todos=parseValues;
         // console.log(todos);
-        for(let i=0 ;i<todos.length;i++){               //Displaying to user
+        for(let i = 0 ;i < todos.length ; i++){               //Displaying to user
             addNewTodo(todos[i]);
         }
     }
