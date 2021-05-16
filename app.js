@@ -9,6 +9,9 @@ var todos=[];
 var hour = document.querySelector('.hour');
 var minute = document.querySelector('.minute');
 var second = document.querySelector('.seconds');
+var day = document.querySelector('.day');
+var month = document.querySelector('.month');
+var year = document.querySelector('.year');
 
 // calculations 
 function calculate(){
@@ -16,6 +19,10 @@ function calculate(){
     hour.innerText = date.getHours();
     minute.innerText = date.getMinutes();
     second.innerText = date.getSeconds();
+    day.innerText = date.getDate();
+    month.innerText = date.getMonth();
+    year.innerText = date.getFullYear();
+    
 }
 
 setInterval(calculate, 1000);
